@@ -1,56 +1,67 @@
 {
   "$schema": "https://redblue.org/schemas/taxonomy.json",
-  "version": "1.0.0",
+  "version": "1.1.0",
+  "name_policy": "Package names are free-form identifiers (e.g. vector2d, sqlite, chrono, polars). Prefixes are purely optional suggestions. All 100k+ packages use natural names; taxonomy classifies domains without restricting package names.",
   "organizations": {
     "rb-pkg-sys": {
       "domain": "System, OS, C-FFI, Hardware, Time, Clocks & Concurrency",
-      "allowed_prefixes": ["sys_", "os_", "ffi_", "io_", "posix_", "win_", "linux_", "time_", "clock_", "sync_"],
-      "keywords": ["process", "thread", "signal", "memory", "raw_buffer", "file_descriptor", "syscall", "time", "duration", "clock", "atomic", "channel"]
+      "recommended_prefixes": ["sys_", "os_", "ffi_", "io_", "posix_", "time_"],
+      "domain_tags": ["process", "thread", "signal", "memory", "raw_buffer", "file_descriptor", "syscall", "time", "duration", "clock", "atomic", "channel", "serial_port", "bluetooth", "gpio"],
+      "benchmark_references": ["POSIX.1-2017", "Linux kernel syscalls", "Win32 API"]
     },
     "rb-pkg-web": {
       "domain": "Web Protocols, HTTP, WebSockets, REST, APIs",
-      "allowed_prefixes": ["web_", "http_", "ws_", "rest_", "api_", "graphql_"],
-      "keywords": ["http_client", "http_server", "router", "middleware", "jwt", "oauth", "html", "uri"]
+      "recommended_prefixes": ["web_", "http_", "ws_", "rest_", "api_"],
+      "domain_tags": ["http_client", "http_server", "router", "middleware", "jwt", "oauth", "html", "uri", "sse", "webrtc", "openapi"],
+      "benchmark_references": ["RFC 9110 (HTTP/1.1)", "RFC 9113 (HTTP/2)", "RFC 6455 (WebSocket)"]
     },
     "rb-pkg-net": {
-      "domain": "Low-level Networking, Sockets, DNS, Protocols",
-      "allowed_prefixes": ["net_", "tcp_", "udp_", "dns_", "ip_", "socket_"],
-      "keywords": ["tcp_stream", "udp_socket", "dns_resolver", "packet", "tls_stream", "quic", "pcap"]
+      "domain": "Low-level Networking, Sockets, DNS, Transport Protocols",
+      "recommended_prefixes": ["net_", "tcp_", "udp_", "dns_", "socket_"],
+      "domain_tags": ["tcp_stream", "udp_socket", "dns_resolver", "packet", "tls_stream", "quic", "pcap", "dhcp", "icmp", "snmp"],
+      "benchmark_references": ["IETF RFC standards", "Berkeley Sockets API"]
     },
     "rb-pkg-data": {
       "domain": "Data Structures, Collections, Databases, Serialization & Compression",
-      "allowed_prefixes": ["db_", "data_", "sql_", "format_", "col_", "compress_", "archive_"],
-      "keywords": ["sqlite", "redis", "postgres", "json", "yaml", "csv", "toml", "parquet", "orm", "trie", "btree", "graph", "lru_cache", "ring_buffer", "priority_queue", "gzip", "zstd", "tar", "zip"]
+      "recommended_prefixes": ["db_", "data_", "sql_", "format_", "col_"],
+      "domain_tags": ["sqlite", "redis", "postgres", "json", "yaml", "csv", "toml", "parquet", "orm", "trie", "btree", "graph", "lru_cache", "ring_buffer", "priority_queue", "gzip", "zstd", "tar", "zip"],
+      "benchmark_references": ["Python itertools/collections", "SQL:2016", "Apache Parquet"]
     },
     "rb-pkg-math": {
-      "domain": "Numerical Computing, Linear Algebra, Calculus, Statistics",
-      "allowed_prefixes": ["math_", "matrix_", "vec_", "stat_", "num_", "calc_"],
-      "keywords": ["vector2d", "vector3d", "matrix", "quaternion", "complex", "bigint", "fft", "primes"]
+      "domain": "Numerical Computing, Linear Algebra, Calculus, Statistics, Geometry & Physics",
+      "recommended_prefixes": ["math_", "matrix_", "vec_", "stat_", "calc_"],
+      "domain_tags": ["vector2d", "vector3d", "matrix", "quaternion", "complex", "bigint", "fft", "primes", "statistics", "calculus", "spline", "collision2d", "collision3d"],
+      "benchmark_references": ["IEEE 754", "BLAS Level 1-3", "LAPACK"]
     },
     "rb-pkg-ai": {
-      "domain": "Machine Learning, Neural Networks, Embeddings, LLMs",
-      "allowed_prefixes": ["ai_", "ml_", "nn_", "llm_", "tensor_", "embed_"],
-      "keywords": ["tensor", "autodiff", "transformer", "onnx", "tokenizer", "vector_search", "rag"]
+      "domain": "Machine Learning, Neural Networks, Embeddings, LLMs & Search",
+      "recommended_prefixes": ["ai_", "ml_", "nn_", "llm_", "tensor_"],
+      "domain_tags": ["tensor", "autodiff", "transformer", "onnx", "tokenizer", "vector_search", "rag", "loss_functions", "optimizers"],
+      "benchmark_references": ["ONNX standard", "OpenAI API spec", "HuggingFace tokenizers"]
     },
     "rb-pkg-crypto": {
-      "domain": "Cryptography, Hashing, Ciphers, Certificates",
-      "allowed_prefixes": ["crypto_", "hash_", "cipher_", "auth_"],
-      "keywords": ["blake3", "sha256", "sha512", "aes", "chacha20", "ed25519", "rsa", "x509"]
+      "domain": "Cryptography, Hashing, Ciphers, Signatures & Certificates",
+      "recommended_prefixes": ["crypto_", "hash_", "cipher_", "auth_"],
+      "domain_tags": ["blake3", "sha256", "sha512", "aes", "chacha20", "ed25519", "rsa", "x509", "argon2", "hkdf", "hmac"],
+      "benchmark_references": ["NIST FIPS standards", "RFC 8439 (ChaCha20)", "RFC 8032 (Ed25519)"]
     },
     "rb-pkg-media": {
-      "domain": "Images, Audio, 2D Canvas, Vector Graphics",
-      "allowed_prefixes": ["media_", "img_", "audio_", "gfx_", "canvas_", "svg_"],
-      "keywords": ["image_decode", "png", "jpeg", "audio_synth", "wav", "mp3", "canvas2d", "svg_render"]
+      "domain": "Images, Audio, 2D Canvas, Vector Graphics & Colors",
+      "recommended_prefixes": ["media_", "img_", "audio_", "gfx_", "canvas_"],
+      "domain_tags": ["image_decode", "png", "jpeg", "audio_synth", "wav", "mp3", "canvas2d", "svg_render", "color_spaces", "font_parser"],
+      "benchmark_references": ["W3C Canvas 2D spec", "PNG/JPEG specifications", "MIDI 1.0/2.0"]
     },
     "rb-pkg-cli": {
       "domain": "Command-Line Tools, TUI, Text Processing, Unicode & Styling",
-      "allowed_prefixes": ["cli_", "tui_", "terminal_", "arg_", "text_", "str_", "fmt_", "unicode_"],
-      "keywords": ["arg_parser", "colors", "box_drawing", "progress_bar", "table", "prompt", "ansi", "regex", "fuzzy", "i18n", "unicode", "diff", "template"]
+      "recommended_prefixes": ["cli_", "tui_", "terminal_", "arg_", "text_"],
+      "domain_tags": ["arg_parser", "colors", "box_drawing", "progress_bar", "table", "prompt", "ansi", "regex", "fuzzy", "i18n", "unicode", "diff", "template"],
+      "benchmark_references": ["ANSI / ECMA-48 terminal escapes", "Unicode 15.0", "POSIX Utility Conventions"]
     },
     "rb-apps-org": {
       "domain": "Flagship Userland Applications & Tools",
-      "allowed_prefixes": ["app_"],
-      "keywords": ["sysmon", "todo_cli", "spreadsheet", "vector_canvas", "markdown_ide", "pass_manager"]
+      "recommended_prefixes": ["app_"],
+      "domain_tags": ["sysmon", "todo_cli", "spreadsheet", "vector_canvas", "markdown_ide", "pass_manager", "api_tester"],
+      "benchmark_references": ["Modern CLI/TUI standards", "POSIX User Portability"]
     }
   }
 }
