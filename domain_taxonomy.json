@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "organizations": {
     "rb-pkg-sys": {
-      "domain": "System, OS, C-FFI, and Hardware",
-      "allowed_prefixes": ["sys_", "os_", "ffi_", "io_", "posix_", "win_", "linux_"],
-      "keywords": ["process", "thread", "signal", "memory", "raw_buffer", "file_descriptor", "syscall"]
+      "domain": "System, OS, C-FFI, Hardware, Time, Clocks & Concurrency",
+      "allowed_prefixes": ["sys_", "os_", "ffi_", "io_", "posix_", "win_", "linux_", "time_", "clock_", "sync_"],
+      "keywords": ["process", "thread", "signal", "memory", "raw_buffer", "file_descriptor", "syscall", "time", "duration", "clock", "atomic", "channel"]
     },
     "rb-pkg-web": {
       "domain": "Web Protocols, HTTP, WebSockets, REST, APIs",
@@ -18,9 +18,9 @@
       "keywords": ["tcp_stream", "udp_socket", "dns_resolver", "packet", "tls_stream", "quic", "pcap"]
     },
     "rb-pkg-data": {
-      "domain": "Databases, Serialization, File Formats",
-      "allowed_prefixes": ["db_", "data_", "sql_", "format_"],
-      "keywords": ["sqlite", "redis", "postgres", "json", "yaml", "csv", "toml", "parquet", "orm"]
+      "domain": "Data Structures, Collections, Databases, Serialization & Compression",
+      "allowed_prefixes": ["db_", "data_", "sql_", "format_", "col_", "compress_", "archive_"],
+      "keywords": ["sqlite", "redis", "postgres", "json", "yaml", "csv", "toml", "parquet", "orm", "trie", "btree", "graph", "lru_cache", "ring_buffer", "priority_queue", "gzip", "zstd", "tar", "zip"]
     },
     "rb-pkg-math": {
       "domain": "Numerical Computing, Linear Algebra, Calculus, Statistics",
@@ -43,9 +43,9 @@
       "keywords": ["image_decode", "png", "jpeg", "audio_synth", "wav", "mp3", "canvas2d", "svg_render"]
     },
     "rb-pkg-cli": {
-      "domain": "Command-Line Tools, TUI, Styling, Prompts",
-      "allowed_prefixes": ["cli_", "tui_", "terminal_", "arg_"],
-      "keywords": ["arg_parser", "colors", "box_drawing", "progress_bar", "table", "prompt", "ansi"]
+      "domain": "Command-Line Tools, TUI, Text Processing, Unicode & Styling",
+      "allowed_prefixes": ["cli_", "tui_", "terminal_", "arg_", "text_", "str_", "fmt_", "unicode_"],
+      "keywords": ["arg_parser", "colors", "box_drawing", "progress_bar", "table", "prompt", "ansi", "regex", "fuzzy", "i18n", "unicode", "diff", "template"]
     },
     "rb-apps-org": {
       "domain": "Flagship Userland Applications & Tools",
