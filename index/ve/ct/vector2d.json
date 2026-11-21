@@ -1,0 +1,10 @@
+{
+  "name": "vector2d",
+  "display_name": "vector2d",
+  "org": "rb-pkg-math",
+  "version": "0.1.0",
+  "repository": "https://github.com/rb-pkg-math/packages",
+  "path": "packages/vector2d",
+  "published_at": "2026-11-20T05:50:00Z",
+  "status": "published"
+}

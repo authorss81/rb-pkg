@@ -1,0 +1,56 @@
+{
+  "$schema": "https://redblue.org/schemas/taxonomy.json",
+  "version": "1.0.0",
+  "organizations": {
+    "rb-pkg-sys": {
+      "domain": "System, OS, C-FFI, and Hardware",
+      "allowed_prefixes": ["sys_", "os_", "ffi_", "io_", "posix_", "win_", "linux_"],
+      "keywords": ["process", "thread", "signal", "memory", "raw_buffer", "file_descriptor", "syscall"]
+    },
+    "rb-pkg-web": {
+      "domain": "Web Protocols, HTTP, WebSockets, REST, APIs",
+      "allowed_prefixes": ["web_", "http_", "ws_", "rest_", "api_", "graphql_"],
+      "keywords": ["http_client", "http_server", "router", "middleware", "jwt", "oauth", "html", "uri"]
+    },
+    "rb-pkg-net": {
+      "domain": "Low-level Networking, Sockets, DNS, Protocols",
+      "allowed_prefixes": ["net_", "tcp_", "udp_", "dns_", "ip_", "socket_"],
+      "keywords": ["tcp_stream", "udp_socket", "dns_resolver", "packet", "tls_stream", "quic", "pcap"]
+    },
+    "rb-pkg-data": {
+      "domain": "Databases, Serialization, File Formats",
+      "allowed_prefixes": ["db_", "data_", "sql_", "format_"],
+      "keywords": ["sqlite", "redis", "postgres", "json", "yaml", "csv", "toml", "parquet", "orm"]
+    },
+    "rb-pkg-math": {
+      "domain": "Numerical Computing, Linear Algebra, Calculus, Statistics",
+      "allowed_prefixes": ["math_", "matrix_", "vec_", "stat_", "num_", "calc_"],
+      "keywords": ["vector2d", "vector3d", "matrix", "quaternion", "complex", "bigint", "fft", "primes"]
+    },
+    "rb-pkg-ai": {
+      "domain": "Machine Learning, Neural Networks, Embeddings, LLMs",
+      "allowed_prefixes": ["ai_", "ml_", "nn_", "llm_", "tensor_", "embed_"],
+      "keywords": ["tensor", "autodiff", "transformer", "onnx", "tokenizer", "vector_search", "rag"]
+    },
+    "rb-pkg-crypto": {
+      "domain": "Cryptography, Hashing, Ciphers, Certificates",
+      "allowed_prefixes": ["crypto_", "hash_", "cipher_", "auth_"],
+      "keywords": ["blake3", "sha256", "sha512", "aes", "chacha20", "ed25519", "rsa", "x509"]
+    },
+    "rb-pkg-media": {
+      "domain": "Images, Audio, 2D Canvas, Vector Graphics",
+      "allowed_prefixes": ["media_", "img_", "audio_", "gfx_", "canvas_", "svg_"],
+      "keywords": ["image_decode", "png", "jpeg", "audio_synth", "wav", "mp3", "canvas2d", "svg_render"]
+    },
+    "rb-pkg-cli": {
+      "domain": "Command-Line Tools, TUI, Styling, Prompts",
+      "allowed_prefixes": ["cli_", "tui_", "terminal_", "arg_"],
+      "keywords": ["arg_parser", "colors", "box_drawing", "progress_bar", "table", "prompt", "ansi"]
+    },
+    "rb-apps-org": {
+      "domain": "Flagship Userland Applications & Tools",
+      "allowed_prefixes": ["app_"],
+      "keywords": ["sysmon", "todo_cli", "spreadsheet", "vector_canvas", "markdown_ide", "pass_manager"]
+    }
+  }
+}
