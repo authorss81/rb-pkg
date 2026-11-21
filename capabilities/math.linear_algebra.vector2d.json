@@ -1,0 +1,8 @@
+{
+  "concept_id": "math.linear_algebra.vector2d",
+  "owner": "rb-pkg-math",
+  "primary_package": "vector2d",
+  "description": "2D Cartesian vector arithmetic, dot products, norms, normalization, and angle calculations",
+  "registered_at_epoch": 1793100000,
+  "registered_at_utc": "2026-11-21T06:39:00Z"
+}

@@ -1,0 +1,31 @@
+{
+  "domain": "math",
+  "category": "linear_algebra",
+  "benchmark_reference": "IEEE 754 / BLAS Level 1-3",
+  "concepts": [
+    {
+      "id": "math.linear_algebra.vector2d",
+      "canonical_name": "vector2d",
+      "title": "2D Cartesian Vector Math",
+      "required_functions": ["new", "dot", "magnitude", "normalize", "angle_between"]
+    },
+    {
+      "id": "math.linear_algebra.vector3d",
+      "canonical_name": "vector3d",
+      "title": "3D Spatial Vector Math",
+      "required_functions": ["new", "dot", "cross", "magnitude", "normalize"]
+    },
+    {
+      "id": "math.linear_algebra.matrix2x2",
+      "canonical_name": "matrix2x2",
+      "title": "2x2 Matrix Transformations & Determinants",
+      "required_functions": ["new", "multiply", "determinant", "inverse", "transpose"]
+    },
+    {
+      "id": "math.linear_algebra.quaternion",
+      "canonical_name": "quaternion",
+      "title": "Hamiltonian Quaternions & 3D Rotations",
+      "required_functions": ["new", "conjugate", "multiply", "to_rotation_matrix", "slerp"]
+    }
+  ]
+}

@@ -13,6 +13,8 @@ To prevent duplicate package synthesis across our 10 decentralized organizations
 
 ## Directory Structure
 - `index/`: 2-character sparse registry index holding package metadata.
+- `capabilities/`: Semantic capability concept registry (`<concept_id>.json`) mapping domain capabilities to implementations.
+- `taxonomy/`: Static benchmark taxonomies (POSIX, IEEE, RFC) for 100,000+ package discovery with zero LLM tokens.
 - `leases/`: Temporary in-flight lease reservations.
 - `domain_taxonomy.json`: Strict domain boundary catalog.
-- `scripts/`: Tooling for canonical name normalization, availability checking, lease claiming, and package registration.
+- `scripts/`: Tooling for canonical name normalization, availability checking, capability indexing, lease claiming, and package registration.
