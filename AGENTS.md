@@ -75,6 +75,12 @@ packages/<pkg_name>/
 - Log the blocker in `docs/OUT_OF_SCOPE_FINDINGS_LEDGER.md` with status `[BLOCKED_BY_CORE]`.
 - Mark the package phase deferred upstream and proceed to the next package.
 
+### 5. AI Worker Concurrency Cap & Nightly Test Slot Reservation (18 Workers Max)
+- GitHub Actions enforces a verified limit of 20 concurrent runner jobs per account/organization.
+- AI worker concurrency is **strictly capped at 18 parallel runners per organization** (scaling to 180 concurrent AI workers across the 10 domain orgs).
+- Exactly **2 runner slots in every organization are permanently reserved for nightly regression sweeps (`nightly_sweep.yml`) and pull request validation gates**.
+- Autonomous schedulers must never dispatch more than 18 concurrent worker jobs, ensuring continuous integration and test verification are never starved or queued for long durations.
+
 ---
 
 ## Target Capability Priority Matrix
